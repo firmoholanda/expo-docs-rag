@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>expo docs rag</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+  .modes { display: flex; gap: var(--s1); align-items: center; margin-bottom: var(--s3); flex-wrap: wrap; }
+  .modes label { cursor: pointer; padding: var(--s1) var(--s3); border: 1px solid var(--line); border-radius: 999px; font-size: var(--f2); background: var(--surface); }
+  .modes input { display: none; }
+  .modes input:checked + span { color: var(--accent); font-weight: 600; }
+  .modes label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+  #thread { display: flex; flex-direction: column; gap: var(--s4); min-height: 40vh; }
+  .q { align-self: flex-end; background: var(--accent); color: #fff; padding: var(--s2) var(--s3); border-radius: var(--radius) var(--radius) 2px var(--radius); max-width: 80%; }
+  .a p { margin: 0 0 var(--s2); }
+  .cite { display: inline-block; min-width: 1.6em; text-align: center; font-size: var(--f1); font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 6px; text-decoration: none; margin: 0 1px; }
+  .sources { margin-top: var(--s3); display: grid; gap: var(--s2); }
+  .src { border: 1px solid var(--line); border-radius: 8px; padding: var(--s2) var(--s3); background: var(--bg); scroll-margin-top: 80px; }
+  .src.cited { border-color: var(--accent); }
+  .src summary { cursor: pointer; font-size: var(--f2); }
+  .src .n { display: inline-block; width: 1.6em; text-align: center; font-weight: 700; color: var(--accent); }
+  .score { float: right; color: var(--muted); font-size: var(--f1); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--s2); margin: var(--s3) 0; }
+  .chip { cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: var(--s2) var(--s3); border-radius: 999px; font: inherit; font-size: var(--f2); }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+  form { position: sticky; bottom: 0; display: flex; gap: var(--s2); padding: var(--s3) 0; background: linear-gradient(transparent, var(--bg) 30%); }
+  input[type=text] { flex: 1; font: inherit; padding: var(--s3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+  button.send { font: inherit; font-weight: 600; border: 0; background: var(--accent); color: #fff; padding: 0 var(--s4); border-radius: var(--radius); cursor: pointer; }
+  button.send:disabled { opacity: .5; cursor: wait; }
+</style>
+</head>
+<body>
+<header>
+  <svg class="icon" viewBox="0 0 24 24" style="width:26px;height:26px;color:var(--accent)"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3H6a2 2 0 0 1-2-2z"/><path d="M8 8h8M8 12h5"/></svg>
+  <h1>expo docs rag</h1>
+  <nav><a class="on" href="/">chat</a><a href="/evals">evals</a></nav>
+</header>
+<main>
+  <div id="banner"></div>
+  <p class="muted">Ask about Expo Router. Every answer cites the doc passages it used, and says so when the docs don't cover the question.</p>
+  <div class="modes" role="radiogroup" aria-label="search mode">
+    <span class="muted">search:</span>
+    <label><input type="radio" name="mode" value="hybrid" checked><span>hybrid</span></label>
+    <label><input type="radio" name="mode" value="dense"><span>semantic</span></label>
+    <label><input type="radio" name="mode" value="bm25"><span>keyword</span></label>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div id="thread"></div>
+  <form id="form">
+    <input type="text" id="q" placeholder="e.g. how do I protect routes for logged-out users?" autocomplete="off" required minlength="3">
+    <button class="send" id="send">ask</button>
+  </form>
+</main>
+<script>
+const SUGGESTIONS = [
+  "How do I turn off the automatic /_sitemap route?",
+  "How can I abort an API route early and return a 404?",
+  "How do I show different screens to logged-in and logged-out users?",
+  "How do I request foreground location permission in an Expo app?"
+];
+const $ = (s) => document.querySelector(s);
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Tiny markdown: code fences, inline code, paragraphs. Everything is escaped first.
+function render(text, uid) {
+  const parts = text.split(/```[a-z]*\n?/);
+  return parts.map((p, i) => {
+    if (i % 2) return `<pre><code>${esc(p.trim())}</code></pre>`;
+    return esc(p).split(/\n{2,}/).filter(Boolean).map((para) =>
+      "<p>" + para.replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\n/g, "<br>")
+        .replace(/\[(\d+)\]/g, `<a class="cite" href="#${uid}-s$1">$1</a>`) + "</p>").join("");
+  }).join("");
+}
+
+function sourceCard(s, uid, cited) {
+  return `<details class="src ${cited ? "cited" : ""}" id="${uid}-s${s.n}">
+    <summary><span class="n">${s.n}</span> ${esc(s.title)} <span class="muted">&rsaquo; ${esc(s.heading)}</span><span class="score">${s.score}</span></summary>
+    <pre><code>${esc(s.text)}</code></pre>
+    <a href="${esc(s.url)}" target="_blank" rel="noopener">open the docs page</a>
+  </details>`;
+}
+
+let uidCount = 0;
+async function ask(question) {
+  const uid = "m" + uidCount++;
+  const mode = document.querySelector("input[name=mode]:checked").value;
+  $("#thread").insertAdjacentHTML("beforeend", `<div class="q">${esc(question)}</div><div class="a card" id="${uid}"><span class="muted">searching the docs…</span></div>`);
+  $("#send").disabled = true;
+  try {
+    const res = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, mode }) });
+    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
+    const data = await res.json();
+    const badge = data.abstained ? `<p class="muted"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>not covered by the docs</p>` : "";
+    $("#" + uid).innerHTML = render(data.answer, uid) + badge +
+      `<div class="sources">${data.sources.map((s) => sourceCard(s, uid, data.cited.includes(s.n))).join("")}</div>`;
+  } catch (e) {
+    $("#" + uid).innerHTML = `<span style="color:var(--bad)">${esc(e.message)}</span>`;
+  } finally {
+    $("#send").disabled = false;
+    $("#" + uid).scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}
+
+$("#chips").innerHTML = SUGGESTIONS.map((s) => `<button class="chip" type="button">${esc(s)}</button>`).join("");
+$("#chips").addEventListener("click", (e) => { if (e.target.classList.contains("chip")) ask(e.target.textContent); });
+$("#form").addEventListener("submit", (e) => { e.preventDefault(); const q = $("#q").value.trim(); if (q) { $("#q").value = ""; ask(q); } });
+fetch("/api/health").then((r) => r.json()).then((h) => {
+  if (!h.generation) $("#banner").innerHTML = `<div class="banner">No <code>ANTHROPIC_API_KEY</code> is set, so you'll see the closest passages instead of written answers. Search and the evals page still work.</div>`;
+});
+</script>
+</body>
+</html>

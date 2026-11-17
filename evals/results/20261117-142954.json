@@ -1,0 +1,1299 @@
+{
+  "created": "2026-11-17T14:29:51+00:00",
+  "label": "q04 also accepts navigation.mdx (Anchor routes answers it too)",
+  "config": {
+    "k": 5,
+    "chunks": 753,
+    "embed_model": "BAAI/bge-small-en-v1.5"
+  },
+  "retrieval": {
+    "bm25": {
+      "summary": {
+        "n": 22,
+        "hit@1": 0.8181818181818182,
+        "hit@3": 0.9090909090909091,
+        "hit@5": 0.9090909090909091,
+        "mrr": 0.8560606060606061
+      },
+      "questions": [
+        {
+          "id": "q01",
+          "question": "What happens if I create a route at app/manifest.tsx?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/_sitemap"
+            },
+            {
+              "source": "router/advanced/apple-handoff.mdx",
+              "heading": "Debugging"
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "How do I turn off the automatic /_sitemap route?",
+          "rank": null,
+          "top": [
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Review the iOS header appearance"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/_sitemap"
+            },
+            {
+              "source": "faq.mdx",
+              "heading": "How do I add custom native code to my Expo project?"
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How do I move my app folder into a top-level src directory?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Example prompts"
+            },
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory > Notes"
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How do I make a deep-linked screen still show a back button to the home screen?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/router-settings.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/basics/navigation.mdx",
+              "heading": "Anchor routes"
+            },
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router > Modal presentation and dismiss behavior"
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "Which hook asks for confirmation before leaving a screen with unsaved changes, and from which SDK is it available?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Disable removal prevention"
+            },
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Prevent a screen from being removed"
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I run an effect only while a screen is focused?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused"
+            },
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused > Pass dependencies to `useFocusEffect"
+            },
+            {
+              "source": "router/reference/redirects.mdx",
+              "heading": "In-app redirects > Using `useRouter"
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How can I abort an API route early and return a 404?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Error handling"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Common questions > How do I add a custom server?"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Task scheduling"
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "Are typed routes enabled by default?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Changes made to the environment > Global types"
+            },
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/advanced/react-activity.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "Which helpers give me typed loader functions for static and server rendering?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Typed loader functions > createStaticLoader"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Typed loader functions > createServerLoader"
+            },
+            {
+              "source": "router/web/server-rendering.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "Where do I put server middleware and what must the file export?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Create your middleware file"
+            },
+            {
+              "source": "router/migrate/from-expo-webpack.mdx",
+              "heading": "Service workers"
+            },
+            {
+              "source": "mcp.mdx",
+              "heading": "What does Expo MCP Server do?"
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "Can I use middleware with static web output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Enable server middleware in your app configuration"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Remove deprecated server flags"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Server-side rendering"
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I catch errors in one route and offer a retry button?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Error handling"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Basic example > Error handling"
+            },
+            {
+              "source": "faq.mdx",
+              "heading": "How do I add custom native code to my Expo project?"
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I show different screens to logged-in and logged-out users?",
+          "rank": 2,
+          "top": [
+            {
+              "source": "router/basics/common-navigation-patterns.mdx",
+              "heading": "Authenticated users only: protected routes"
+            },
+            {
+              "source": "router/advanced/protected.mdx",
+              "heading": "Nesting protected screens"
+            },
+            {
+              "source": "router/advanced/authentication-rewrites.mdx",
+              "heading": "Using React Context and Route Groups"
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "What is the difference between useLocalSearchParams and useGlobalSearchParams?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Local versus global URL parameters"
+            },
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Route parameters"
+            },
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Statically-typed URL parameters"
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I pre-render dynamic routes when using static output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Common questions > How do I add a custom server?"
+            },
+            {
+              "source": "router/web/server-headers.mdx",
+              "heading": "How it works > Output modes"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Create an API route"
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How do I present a route as a modal?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router > Usage"
+            },
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Example prompts"
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I create an API route, and what must the file be named?",
+          "rank": null,
+          "top": [
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Common questions > How do I add a custom server?"
+            },
+            {
+              "source": "mcp.mdx",
+              "heading": "What does Expo MCP Server do?"
+            },
+            {
+              "source": "router/basics/notation.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "Why does my route at app/assets.tsx never load?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/assets/*"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Fonts"
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Do I need to install a separate package for the drawer navigator?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Installation"
+            },
+            {
+              "source": "faq.mdx",
+              "heading": "Do I need to switch from React Native to use Expo?"
+            },
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Installation"
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How can an AI agent read a single Expo docs page as markdown?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "llms.mdx",
+              "heading": "Per-page markdown"
+            },
+            {
+              "source": "llms.mdx",
+              "heading": "Quick start"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I test Expo Router screens, and where should test files go?",
+          "rank": 3,
+          "top": [
+            {
+              "source": "faq.mdx",
+              "heading": "What can I do or cannot do with Expo Go?"
+            },
+            {
+              "source": "mcp.mdx",
+              "heading": "What does Expo MCP Server do?"
+            },
+            {
+              "source": "router/reference/testing.mdx",
+              "heading": "Navigation helpers"
+            }
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "Which AI agents do Expo Skills work with?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Install Expo Skills"
+            },
+            {
+              "source": "llms.mdx",
+              "heading": "Overview"
+            }
+          ]
+        }
+      ]
+    },
+    "dense": {
+      "summary": {
+        "n": 22,
+        "hit@1": 0.9545454545454546,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.9772727272727273
+      },
+      "questions": [
+        {
+          "id": "q01",
+          "question": "What happens if I create a route at app/manifest.tsx?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/basics/core-concepts.mdx",
+              "heading": "The rules of Expo Router applied"
+            },
+            {
+              "source": "router/advanced/native-intent.mdx",
+              "heading": "Rewrite URLs"
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "How do I turn off the automatic /_sitemap route?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/sitemap.mdx",
+              "heading": "Sitemap"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/_sitemap"
+            },
+            {
+              "source": "router/advanced/apple-handoff.mdx",
+              "heading": "Usage > Meta tags"
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How do I move my app folder into a top-level src directory?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory"
+            },
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory > Notes"
+            },
+            {
+              "source": "router/advanced/platform-specific-modules.mdx",
+              "heading": "Platform-specific extensions > Outside src/app directory"
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How do I make a deep-linked screen still show a back button to the home screen?",
+          "rank": 2,
+          "top": [
+            {
+              "source": "router/reference/troubleshooting.mdx",
+              "heading": "Missing back button"
+            },
+            {
+              "source": "router/basics/navigation.mdx",
+              "heading": "Anchor routes"
+            },
+            {
+              "source": "router/basics/navigation.mdx",
+              "heading": "Anchor routes"
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "Which hook asks for confirmation before leaving a screen with unsaved changes, and from which SDK is it available?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Disable removal prevention"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Prevent a screen from being removed"
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I run an effect only while a screen is focused?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused"
+            },
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused > Pass dependencies to `useFocusEffect"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Replace `freezeOnBlur"
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How can I abort an API route early and return a 404?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Error handling"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Error handling"
+            },
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Unmatched routes > Route priority"
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "Are typed routes enabled by default?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Changes made to the environment > React Native Web"
+            },
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Imperative navigation"
+            },
+            {
+              "source": "router/basics/notation.mdx",
+              "heading": "Types of route notation > index.tsx files"
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "Which helpers give me typed loader functions for static and server rendering?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Typed loader functions"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Difference between static and server rendering"
+            },
+            {
+              "source": "router/web/server-rendering.mdx",
+              "heading": "Comparison with static rendering"
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "Where do I put server middleware and what must the file export?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Create your middleware file"
+            },
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Enable server middleware in your app configuration"
+            },
+            {
+              "source": "router/web/server-rendering.mdx",
+              "heading": "Production"
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "Can I use middleware with static web output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Enable server middleware in your app configuration"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Server-side rendering"
+            },
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "How it works > When middleware runs"
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I catch errors in one route and offer a retry button?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Error handling"
+            },
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Error handling"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Basic example > Error handling"
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I show different screens to logged-in and logged-out users?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/protected.mdx",
+              "heading": "Nesting protected screens"
+            },
+            {
+              "source": "router/advanced/protected.mdx",
+              "heading": "Multiple protected screens"
+            },
+            {
+              "source": "router/advanced/stack.mdx",
+              "heading": "Screen options and header configuration > Set screen options dynamically"
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "What is the difference between useLocalSearchParams and useGlobalSearchParams?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Local versus global URL parameters"
+            },
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Local versus global URL parameters"
+            },
+            {
+              "source": "router/migrate/from-react-navigation.mdx",
+              "heading": "Migration > Ref"
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I pre-render dynamic routes when using static output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Dynamic Routes"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Server-side rendering"
+            },
+            {
+              "source": "router/web/async-routes.mdx",
+              "heading": "Static rendering"
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How do I present a route as a modal?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router > Usage"
+            },
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router > Modal presentation and dismiss behavior"
+            },
+            {
+              "source": "router/advanced/web-modals.mdx",
+              "heading": "Use a transparent overlay route"
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I create an API route, and what must the file be named?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Create an API route"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Dynamic Routes > Read files using `process.cwd()"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Create an API route"
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "Why does my route at app/assets.tsx never load?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/assets/*"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Unmatched routes"
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Do I need to install a separate package for the drawer navigator?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Installation"
+            },
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Usage"
+            },
+            {
+              "source": "router/advanced/custom-navigators.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How can an AI agent read a single Expo docs page as markdown?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "llms.mdx",
+              "heading": "Per-page markdown"
+            },
+            {
+              "source": "llms.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I test Expo Router screens, and where should test files go?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/testing.mdx",
+              "heading": "renderRouter"
+            },
+            {
+              "source": "router/reference/testing.mdx",
+              "heading": "Configuration"
+            },
+            {
+              "source": "router/basics/core-concepts.mdx",
+              "heading": "The rules of Expo Router applied"
+            }
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "Which AI agents do Expo Skills work with?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Available Expo Skills"
+            },
+            {
+              "source": "mcp.mdx",
+              "heading": "Data privacy"
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid": {
+      "summary": {
+        "n": 22,
+        "hit@1": 0.9090909090909091,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.946969696969697
+      },
+      "questions": [
+        {
+          "id": "q01",
+          "question": "What happens if I create a route at app/manifest.tsx?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/_sitemap"
+            },
+            {
+              "source": "router/basics/core-concepts.mdx",
+              "heading": "The rules of Expo Router applied"
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "How do I turn off the automatic /_sitemap route?",
+          "rank": 2,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/_sitemap"
+            },
+            {
+              "source": "router/reference/sitemap.mdx",
+              "heading": "Sitemap"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Review the iOS header appearance"
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How do I move my app folder into a top-level src directory?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory"
+            },
+            {
+              "source": "router/reference/src-directory.mdx",
+              "heading": "Using a top-level src directory > Notes"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/assets/*"
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How do I make a deep-linked screen still show a back button to the home screen?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/basics/navigation.mdx",
+              "heading": "Anchor routes"
+            },
+            {
+              "source": "router/reference/troubleshooting.mdx",
+              "heading": "Missing back button"
+            },
+            {
+              "source": "router/advanced/router-settings.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "Which hook asks for confirmation before leaving a screen with unsaved changes, and from which SDK is it available?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Disable removal prevention"
+            },
+            {
+              "source": "router/advanced/prevent-screen-removal.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Prevent a screen from being removed"
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I run an effect only while a screen is focused?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused"
+            },
+            {
+              "source": "router/reference/focus-handling.mdx",
+              "heading": "Run an effect when a screen is focused > Pass dependencies to `useFocusEffect"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Replace `freezeOnBlur"
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How can I abort an API route early and return a 404?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Error handling"
+            },
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Unmatched routes > Route priority"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Runtime API > Task scheduling"
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "Are typed routes enabled by default?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Changes made to the environment > React Native Web"
+            },
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "router/migrate/from-react-navigation.mdx",
+              "heading": "Migration > Migrate TypeScript types"
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "Which helpers give me typed loader functions for static and server rendering?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Typed loader functions"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Difference between static and server rendering"
+            },
+            {
+              "source": "router/web/server-rendering.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "Where do I put server middleware and what must the file export?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Create your middleware file"
+            },
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "How it works > Middleware execution order"
+            },
+            {
+              "source": "router/migrate/from-expo-webpack.mdx",
+              "heading": "Service workers"
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "Can I use middleware with static web output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/middleware.mdx",
+              "heading": "Setup > Enable server middleware in your app configuration"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Server-side rendering"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Setup"
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I catch errors in one route and offer a retry button?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Error handling"
+            },
+            {
+              "source": "router/web/data-loaders.mdx",
+              "heading": "Basic example > Error handling"
+            },
+            {
+              "source": "router/error-handling.mdx",
+              "heading": "Error handling > Error boundaries for screens in a layout"
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I show different screens to logged-in and logged-out users?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/protected.mdx",
+              "heading": "Nesting protected screens"
+            },
+            {
+              "source": "router/advanced/authentication-rewrites.mdx",
+              "heading": "Using React Context and Route Groups"
+            },
+            {
+              "source": "router/basics/common-navigation-patterns.mdx",
+              "heading": "Authenticated users only: protected routes"
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "What is the difference between useLocalSearchParams and useGlobalSearchParams?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Local versus global URL parameters"
+            },
+            {
+              "source": "router/reference/url-parameters.mdx",
+              "heading": "Statically-typed URL parameters"
+            },
+            {
+              "source": "router/reference/typed-routes.mdx",
+              "heading": "Route parameters"
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I pre-render dynamic routes when using static output?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Dynamic Routes"
+            },
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Common questions > How do I add a custom server?"
+            },
+            {
+              "source": "router/web/server-rendering.mdx",
+              "heading": "Comparison with static rendering"
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How do I present a route as a modal?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router > Usage"
+            },
+            {
+              "source": "router/advanced/modals.mdx",
+              "heading": "Modal screen using Expo Router"
+            },
+            {
+              "source": "router/advanced/web-modals.mdx",
+              "heading": "Use a transparent overlay route"
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I create an API route, and what must the file be named?",
+          "rank": 3,
+          "top": [
+            {
+              "source": "router/web/static-rendering.mdx",
+              "heading": "Common questions > How do I add a custom server?"
+            },
+            {
+              "source": "router/basics/notation.mdx",
+              "heading": "Types of route notation > index.tsx files"
+            },
+            {
+              "source": "router/web/api-routes.mdx",
+              "heading": "Create an API route"
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "Why does my route at app/assets.tsx never load?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/assets/*"
+            },
+            {
+              "source": "router/reference/reserved-paths.mdx",
+              "heading": "/manifest"
+            },
+            {
+              "source": "router/migrate/from-react-navigation.mdx",
+              "heading": "Migration > Copy screens to the app directory"
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Do I need to install a separate package for the drawer navigator?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Installation"
+            },
+            {
+              "source": "router/advanced/drawer.mdx",
+              "heading": "Installation"
+            },
+            {
+              "source": "router/advanced/custom-navigators.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How can an AI agent read a single Expo docs page as markdown?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "llms.mdx",
+              "heading": "Per-page markdown"
+            },
+            {
+              "source": "llms.mdx",
+              "heading": "Documentation index"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            }
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I test Expo Router screens, and where should test files go?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "router/reference/testing.mdx",
+              "heading": "renderRouter"
+            },
+            {
+              "source": "router/reference/testing.mdx",
+              "heading": "Configuration"
+            },
+            {
+              "source": "router/migrate/sdk-57-to-58.mdx",
+              "heading": "Common migrations > Update Router tests"
+            }
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "Which AI agents do Expo Skills work with?",
+          "rank": 1,
+          "top": [
+            {
+              "source": "skills.mdx",
+              "heading": "Overview"
+            },
+            {
+              "source": "skills.mdx",
+              "heading": "Install Expo Skills"
+            },
+            {
+              "source": "llms.mdx",
+              "heading": "Overview"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "generation": null
+}

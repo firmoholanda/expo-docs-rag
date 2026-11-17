@@ -1,0 +1,26 @@
+{"id": "q01", "question": "What happens if I create a route at app/manifest.tsx?", "answerable": true, "sources": ["router/reference/reserved-paths.mdx"], "facts": ["dev server"]}
+{"id": "q02", "question": "How do I turn off the automatic /_sitemap route?", "answerable": true, "sources": ["router/reference/sitemap.mdx"], "facts": ["sitemap", "false"]}
+{"id": "q03", "question": "How do I move my app folder into a top-level src directory?", "answerable": true, "sources": ["router/reference/src-directory.mdx"], "facts": ["src/app", "tsconfig"]}
+{"id": "q04", "question": "How do I make a deep-linked screen still show a back button to the home screen?", "answerable": true, "sources": ["router/advanced/router-settings.mdx", "router/basics/navigation.mdx"], "facts": ["anchor"]}
+{"id": "q05", "question": "Which hook asks for confirmation before leaving a screen with unsaved changes, and from which SDK is it available?", "answerable": true, "sources": ["router/advanced/prevent-screen-removal.mdx"], "facts": ["usePreventRemove", "58"]}
+{"id": "q06", "question": "How do I run an effect only while a screen is focused?", "answerable": true, "sources": ["router/reference/focus-handling.mdx"], "facts": ["useFocusEffect", "useCallback"]}
+{"id": "q07", "question": "How can I abort an API route early and return a 404?", "answerable": true, "sources": ["router/web/api-routes.mdx"], "facts": ["StatusError", "expo-server"]}
+{"id": "q08", "question": "Are typed routes enabled by default?", "answerable": true, "sources": ["router/reference/typed-routes.mdx"], "facts": ["beta"]}
+{"id": "q09", "question": "Which helpers give me typed loader functions for static and server rendering?", "answerable": true, "sources": ["router/web/data-loaders.mdx"], "facts": ["createStaticLoader", "createServerLoader"]}
+{"id": "q10", "question": "Where do I put server middleware and what must the file export?", "answerable": true, "sources": ["router/web/middleware.mdx"], "facts": ["+middleware", "default"]}
+{"id": "q11", "question": "Can I use middleware with static web output?", "answerable": true, "sources": ["router/web/middleware.mdx"], "facts": ["apiRoutes", "58"]}
+{"id": "q12", "question": "How do I catch errors in one route and offer a retry button?", "answerable": true, "sources": ["router/error-handling.mdx"], "facts": ["ErrorBoundary", "retry"]}
+{"id": "q13", "question": "How do I show different screens to logged-in and logged-out users?", "answerable": true, "sources": ["router/advanced/protected.mdx", "router/advanced/authentication.mdx"], "facts": ["Stack.Protected", "guard"]}
+{"id": "q14", "question": "What is the difference between useLocalSearchParams and useGlobalSearchParams?", "answerable": true, "sources": ["router/reference/url-parameters.mdx"], "facts": ["useLocalSearchParams", "useGlobalSearchParams"]}
+{"id": "q15", "question": "How do I pre-render dynamic routes when using static output?", "answerable": true, "sources": ["router/web/static-rendering.mdx"], "facts": ["generateStaticParams"]}
+{"id": "q16", "question": "How do I present a route as a modal?", "answerable": true, "sources": ["router/advanced/modals.mdx"], "facts": ["presentation", "modal"]}
+{"id": "q17", "question": "How do I create an API route, and what must the file be named?", "answerable": true, "sources": ["router/web/api-routes.mdx"], "facts": ["+api"]}
+{"id": "q18", "question": "Why does my route at app/assets.tsx never load?", "answerable": true, "sources": ["router/reference/reserved-paths.mdx"], "facts": ["Metro"]}
+{"id": "q19", "question": "Do I need to install a separate package for the drawer navigator?", "answerable": true, "sources": ["router/advanced/drawer.mdx"], "facts": ["56", "react-native-drawer-layout"]}
+{"id": "q20", "question": "How can an AI agent read a single Expo docs page as markdown?", "answerable": true, "sources": ["llms.mdx"], "facts": [".md"]}
+{"id": "q21", "question": "How do I test Expo Router screens, and where should test files go?", "answerable": true, "sources": ["router/reference/testing.mdx"], "facts": ["renderRouter", "jest-expo"]}
+{"id": "q22", "question": "Which AI agents do Expo Skills work with?", "answerable": true, "sources": ["skills.mdx"], "facts": ["Claude Code", "Cursor"]}
+{"id": "u01", "question": "How do I request foreground location permission in an Expo app?", "answerable": false, "sources": [], "facts": []}
+{"id": "u02", "question": "How do I set up Redux Toolkit with Expo Router?", "answerable": false, "sources": [], "facts": []}
+{"id": "u03", "question": "How do I record audio and save it to the device?", "answerable": false, "sources": [], "facts": []}
+{"id": "u04", "question": "What does it cost to host an Expo Router API route on EAS Hosting?", "answerable": false, "sources": [], "facts": []}
